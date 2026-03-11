@@ -8,31 +8,35 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         /* Custom scrollbar to match the theme */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f8fafc; 
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #cbd5e1; 
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8; 
-        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f8fafc; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        
         /* Hide scrollbar for tabs on mobile */
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
         /* Active Navigation Link */
-        .active-nav {
-            color: #ea580c !important; /* Tailwind text-orange-600 */
+        .active-nav { color: #ea580c !important; }
+
+        /* Hero Background Slideshow */
+        @keyframes heroSlideshow {
+            0% { opacity: 1; transform: scale(1); }
+            10% { opacity: 1; transform: scale(1.02); }
+            33% { opacity: 1; transform: scale(1.05); }
+            43% { opacity: 0; transform: scale(1.08); }
+            100% { opacity: 0; transform: scale(1); }
         }
+        .bg-slide {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover; opacity: 0; animation: heroSlideshow 15s linear infinite;
+        }
+        .bg-slide:nth-child(1) { animation-delay: 0s; }
+        .bg-slide:nth-child(2) { animation-delay: 5s; }
+        .bg-slide:nth-child(3) { animation-delay: 10s; }
+        .bg-slide:nth-child(4) { animation-delay: 15s; }
+        .bg-slide:nth-child(5) { animation-delay: 20s; }
     </style>
 </head>
 <body class="min-h-screen bg-slate-50 font-sans text-slate-900">
@@ -44,9 +48,9 @@
                     <div class="w-11 h-8 bg-orange-600 rounded-lg flex items-center justify-center mr-2">
                         <span class="text-white font-bold text-xl">DFT</span>
                     </div>
-                    <span class="font-bold text-xl tracking-tight text-slate-900">Workshop On <span class="text-orange-600">DFT</span></span>
+                    <span class="font-bold text-xl tracking-tight text-slate-900">IWTC<sup>2</sup> <span class="text-orange-600">@IITM</span></span>
                 </a>
-                
+               
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="#about" class="nav-item text-slate-600 hover:text-orange-600 font-medium transition-colors">About</a>
                     <a href="#speakers" class="nav-item text-slate-600 hover:text-orange-600 font-medium transition-colors">Speakers</a>
@@ -81,8 +85,16 @@
 
     <section id="home" class="relative pt-24 pb-20 lg:pt-32 lg:pb-28 overflow-hidden">
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 bg-slate-900">
-            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-orange-600/20 blur-3xl"></div>
-            <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-yellow-500/20 blur-3xl"></div>
+            <!-- Slideshow Images -->
+            <img src="https://www.iitm.ac.in/sites/default/files/instigram/202006/8825948475_deer-Beside%20Open%20Air%20Theatre.jpeg" class="bg-slide" alt="Chemistry visualization slide">
+            <img src="https://www.iitm.ac.in/sites/default/files/styles/img_m5/public/instigram/202006/9940309580_nature-Just%20another%20day%20in%20Paradise.jpeg?itok=MIt8h-Dk" class="bg-slide" alt="Laboratory setup slide">
+            <img src="https://images.financialexpressdigital.com/2023/07/A-view-of-the-New-Academic-Complex-at-IIT-Madras-Chennai-Tamil-Nadu-2.jpg" class="bg-slide" alt="Computational data slide">
+            <img src="https://www.iitm.ac.in/sites/default/files/styles/img_m5/public/instigram/202006/9790914869_Deer%20on%20lawns.jpeg?itok=AceBQ0QL" class="bg-slide" alt="Computational data slide">
+            <img src="https://chem.iitm.ac.in/wp-content/uploads/2019/04/chem1-2.jpg" class="bg-slide" alt="Computational data slide">
+           
+            <div class="absolute inset-0 bg-slate-900/50"></div>
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-orange-600/30 blur-3xl mix-blend-screen"></div>
+            <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-yellow-500/30 blur-3xl mix-blend-screen"></div>
             <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTU5IDB2NjBIMFYwaDU5em0tMSAxSDF2NThoNThWMXoiIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+')] opacity-20"></div>
         </div>
 
@@ -95,15 +107,15 @@
                 <span>Registration Now Open</span>
             </div>
             <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-6 leading-tight">
-                Workshop on Density Functional Theory: <br class="hidden md:block" />
+                IITM Workshop on Theoretical & Computational Chemistry: <br class="hidden md:block" />
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">
-                    Methods and Applications in Chemistry
+                     Density Functional Theory
                 </span>
             </h1>
             <p class="mt-4 text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light mb-10">
                 Join researchers and experts at IIT Madras for a comprehensive workshop exploring theory, practical simulations, and real-world applications in molecular science.
             </p>
-            
+           
             <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
                 <div class="flex items-center text-slate-300 bg-white/5 px-5 py-3 rounded-lg border border-white/10 backdrop-blur-sm">
                     <i data-lucide="calendar" class="text-orange-400 mr-3 w-6 h-6"></i>
@@ -183,67 +195,12 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Speaker 1 -->
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow duration-300 group">
-                    <div class="h-64 overflow-hidden">
-                        <img src="   " alt="Dr. Priya Natarajan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-bold text-slate-900">Dr. Priya Natarajan</h4>
-                        <p class="text-sm font-medium text-orange-600 mb-3">Professor, Dept of Chemistry, IIT Madras</p>
-                        <p class="text-slate-600 text-sm mb-5 line-clamp-2">Expert in ab-initio molecular dynamics and transition metal catalysis modeling.</p>
-                        <div class="flex items-center space-x-4">
-                            <a href="https://linkedin.com" target="_blank" class="flex items-center text-slate-400 hover:text-orange-600 transition-colors" title="LinkedIn Profile">
-                                <i data-lucide="linkedin" class="w-5 h-5"></i>
-                            </a>
-                            <a href="mailto:priya.n@example.iitm.ac.in" class="flex items-center text-slate-400 hover:text-orange-600 transition-colors" title="Send Email">
-                                <i data-lucide="mail" class="w-5 h-5"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Speaker 2 -->
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow duration-300 group">
-                    <div class="h-64 overflow-hidden">
-                        <img src="   " alt="Prof. Vikram Rao" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-bold text-slate-900">Prof. Vikram Rao</h4>
-                        <p class="text-sm font-medium text-orange-600 mb-3">Lead Scientist, CCIC Lab</p>
-                        <p class="text-slate-600 text-sm mb-5 line-clamp-2">Specializes in density functional theory applied to renewable energy materials and batteries.</p>
-                        <div class="flex items-center space-x-4">
-                            <a href="https://linkedin.com" target="_blank" class="flex items-center text-slate-400 hover:text-orange-600 transition-colors" title="LinkedIn Profile">
-                                <i data-lucide="linkedin" class="w-5 h-5"></i>
-                            </a>
-                            <a href="mailto:v.rao@example.iitm.ac.in" class="flex items-center text-slate-400 hover:text-orange-600 transition-colors" title="Send Email">
-                                <i data-lucide="mail" class="w-5 h-5"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Speaker 3 -->
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow duration-300 group">
-                    <div class="h-64 overflow-hidden">
-                        <img src="  " alt="Dr. Ananya Sharma" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-bold text-slate-900">Dr. Ananya Sharma</h4>
-                        <p class="text-sm font-medium text-orange-600 mb-3">Postdoctoral Researcher</p>
-                        <p class="text-slate-600 text-sm mb-5 line-clamp-2">Pioneering research in integrating Machine Learning potentials with classical DFT methods.</p>
-                        <div class="flex items-center space-x-4">
-                            <a href="https://linkedin.com" target="_blank" class="flex items-center text-slate-400 hover:text-orange-600 transition-colors" title="LinkedIn Profile">
-                                <i data-lucide="linkedin" class="w-5 h-5"></i>
-                            </a>
-                            <a href="mailto:ananya.s@example.iitm.ac.in" class="flex items-center text-slate-400 hover:text-orange-600 transition-colors" title="Send Email">
-                                <i data-lucide="mail" class="w-5 h-5"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <!-- Dynamic Speakers Container -->
+            <!-- Note: Speakers are generated automatically here by the Javascript at the bottom -->
+            <div id="speakers-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Javascript will inject speaker cards here -->
             </div>
+            
         </div>
     </section>
 
@@ -270,7 +227,7 @@
             </div>
 
             <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden min-h-[400px]">
-                
+               
                 <div id="content-day1" class="day-content">
                     <div class="p-4 bg-orange-50/50 border-b border-slate-100 text-orange-700 font-bold text-xs uppercase tracking-widest">Foundations of DFT</div>
                     <div class="flex flex-col md:flex-row border-b border-slate-100 p-6 hover:bg-slate-50 transition-colors">
@@ -338,26 +295,26 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Member 1 -->
                 <div class="text-center">
-                    <img src="   " alt="Dr. Ramesh Kumar" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover shadow-md">
-                    <h4 class="text-lg font-bold text-slate-900">Dr. Ramesh Kumar</h4>
+                    <img src="https://ui-avatars.com/api/?name=Ramesh+Kumar&background=ea580c&color=fff" alt="Dr. Ramesh Kumar" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover shadow-md">
+                    <h4 class="text-lg font-bold text-slate-900">Dr. Soumen Ghosh</h4>
                     <p class="text-sm text-orange-600 font-medium">Convener</p>
                 </div>
                 <!-- Member 2 -->
                 <div class="text-center">
-                    <img src=" " alt="Dr. Sunita Patel" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover shadow-md">
-                    <h4 class="text-lg font-bold text-slate-900">Dr. Sunita Patel</h4>
+                    <img src="https://ui-avatars.com/api/?name=Sunita+Patel&background=0f172a&color=fff" alt="Dr. Sunita Patel" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover shadow-md">
+                    <h4 class="text-lg font-bold text-slate-900">Dr. XXXXXX</h4>
                     <p class="text-sm text-orange-600 font-medium">Co-Convener</p>
                 </div>
                 <!-- Member 3 -->
                 <div class="text-center">
-                    <img src=" " alt="Karthik R." class="w-32 h-32 rounded-full mx-auto mb-4 object-cover shadow-md">
-                    <h4 class="text-lg font-bold text-slate-900">Karthik R.</h4>
+                    <img src="https://ui-avatars.com/api/?name=Karthik+R&background=ea580c&color=fff" alt="Karthik R." class="w-32 h-32 rounded-full mx-auto mb-4 object-cover shadow-md">
+                    <h4 class="text-lg font-bold text-slate-900">Dr. XXXXX</h4>
                     <p class="text-sm text-orange-600 font-medium">Technical Lead</p>
                 </div>
                 <!-- Member 4 -->
                 <div class="text-center">
-                    <img src=" " alt="Arjun Menon" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover shadow-md">
-                    <h4 class="text-lg font-bold text-slate-900">Arjun Menon</h4>
+                    <img src="https://ui-avatars.com/api/?name=Arjun+Menon&background=0f172a&color=fff" alt="Arjun Menon" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover shadow-md">
+                    <h4 class="text-lg font-bold text-slate-900">Dr. XXXX</h4>
                     <p class="text-sm text-orange-600 font-medium">Logistics Coordinator</p>
                 </div>
             </div>
@@ -399,7 +356,7 @@
                         </div>
                         <span class="font-bold text-xl text-white">Workshop On <span class="text-orange-500">DFT</span></span>
                     </div>
-                    <p class="mb-6 max-w-sm mx-auto md:mx-0">Organized by the XXXXXXXXX.</p>
+                    <p class="mb-6 max-w-sm mx-auto md:mx-0">Organized by the Department of Chemistry, IIT Madras.</p>
                 </div>
                 <div class="flex flex-col items-center md:items-start">
                     <h4 class="text-white font-bold mb-4">Links</h4>
@@ -411,77 +368,185 @@
                     </ul>
                 </div>
             </div>
-            <div class="pt-8 border-t border-white/10 text-center text-sm">
-                <p>&copy; 2026 Workshop On DFT. All rights reserved.</p>
-            </div>
         </div>
     </footer>
 
+
+    <!-- =========================================================================
+         SCRIPT SECTION: TABS, MOBILE MENU, AND EASY EDIT SPEAKERS
+         ========================================================================= -->
     <script>
-        lucide.createIcons();
-
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
-        const closeIcon = document.getElementById('close-icon');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            menuIcon.classList.toggle('hidden');
-            closeIcon.classList.toggle('hidden');
-        });
-
-        // Tab Switching Logic
-        function switchTab(day) {
-            // 1. Reset all buttons
-            const buttons = document.querySelectorAll('[id^="tab-btn-"]');
-            buttons.forEach(btn => {
-                btn.className = "px-6 py-2.5 rounded-lg font-semibold text-sm transition-all text-slate-500 hover:text-slate-700";
-            });
-
-            // 2. Hide all content
-            const contents = document.querySelectorAll('.day-content');
-            contents.forEach(content => content.classList.add('hidden'));
-
-            // 3. Set Active Button
-            const activeBtn = document.getElementById(`tab-btn-${day}`);
-            activeBtn.className = "px-6 py-2.5 rounded-lg font-semibold text-sm transition-all bg-white text-orange-600 shadow-sm";
-
-            // 4. Show Active Content
-            const activeContent = document.getElementById(`content-${day}`);
-            if (activeContent) {
-                activeContent.classList.remove('hidden');
-            }
-        }
-
-        // Active Navigation Link Highlighting (Scroll Spy)
-        const navItems = document.querySelectorAll('.nav-item');
-        const sections = document.querySelectorAll('section');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            
-            // Determine which section is currently visible
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                // Highlight activates slightly before hitting the exact top of the section
-                if (pageYOffset >= sectionTop - window.innerHeight / 3) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            // Apply active class to the current nav item
-            navItems.forEach(item => {
-                item.classList.remove('active-nav');
-                if (item.getAttribute('href') === `#${current}`) {
-                    item.classList.add('active-nav');
-                }
-            });
-        });
+        /* 🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+        EASY EDIT SECTION: ADD, REMOVE, OR MODIFY SPEAKERS HERE
+        🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
         
-        // Trigger scroll event on load to set initial active state
-        window.dispatchEvent(new Event('scroll'));
+        To add a new speaker, simply copy one of the blocks surrounded by { ... },
+        paste it below the last one, and change the text inside the quotes (" ").
+        Make sure every block (except the last one) ends with a comma!
+        */
+        const speakersData = [
+            {
+                name: "Prof. K D Sen",
+                title: "Professor, University of Hyderabad",
+                description: "Expert in ab-initio molecular dynamics and transition metal catalysis modeling.",
+                image: "https://herald.uohyd.ac.in/wp-content/uploads/2020/10/KDSen-300x300.jpg",
+                linkedin: "https://linkedin.com",
+                email: "priya.n@example.iitm.ac.in"
+            },
+            {
+                name: "Prof. Pratim K. Chattaraj",
+                title: "Professor, BITS, Mesra",
+                description: "Specializes in density functional theory applied to renewable energy materials and batteries.",
+                image: "https://bitmesra.ac.in/UploadedDocuments/userpratimchattaraj/FacultyImage/FacImgee1d4e38b52f4c59a3dadda329ca1da0pratim.jpg",
+                linkedin: "https://linkedin.com",
+                email: "v.rao@example.iitm.ac.in"
+            },
+                        {
+                name: "Prof. Nishant Nair",
+                title: "Professor, IIT Kanpur",
+                description: "Specializes in density functional theory applied to renewable energy materials and batteries.",
+                image: "https://home.iitk.ac.in/~nnair/nisanth_photo.jpg",
+                linkedin: "https://linkedin.com",
+                email: "v.rao@example.iitm.ac.in"
+            },
+                        {
+                name: "Prof. Manoj Harbola",
+                title: "Professor,IIT Kanpur",
+                description: "Specializes in density functional theory applied to renewable energy materials and batteries.",
+                image: "https://www.iitk.ac.in/phyold/images/faculties/mkh.jpg",
+                linkedin: "https://linkedin.com",
+                email: "v.rao@example.iitm.ac.in"
+            },
+                        {
+                name: "Prof. Shobhana Narasimhan",
+                title: "Professor, JNCASR",
+                description: "Specializes in density functional theory applied to renewable energy materials and batteries.",
+                image: "https://www.jncasr.ac.in/sites/default/files/Faculty-Profile/2021-02/Shobhana.jpg",
+                linkedin: "https://linkedin.com",
+                email: "v.rao@example.iitm.ac.in"
+            },
+                        {
+                name: "Dr. Niranjan Govind, PNNL USA",
+                title: "Professor, PNNL USA",
+                description: "Specializes in density functional theory applied to renewable energy materials and batteries.",
+                image: "https://www.pnnl.gov/sites/default/files/styles/portrait/public/media/image/Web%20Size-Govind_Niri-2.jpg?h=96e802cb&itok=-o4qvEgm",
+                linkedin: "https://linkedin.com",
+                email: "v.rao@example.iitm.ac.in"
+            },
+                        {
+                name: "Prof. Satya Bulusu, IIT Indore",
+                title: "Professor, IIT Indore",
+                description: "Specializes in density functional theory applied to renewable energy materials and batteries.",
+                image: "https://people.iiti.ac.in/~sbulusu/images/bulusu.jpg",
+                linkedin: "https://linkedin.com",
+                email: "v.rao@example.iitm.ac.in"
+            },
+                        {
+                name: "Prof. Prasanjit Samal",
+                title: "Professor, NISER Bhbaneswar",
+                description: "Specializes in density functional theory applied to renewable energy materials and batteries.",
+                image: "https://www.niser.ac.in/~psamal/images/Prasanjit.jpg",
+                linkedin: "https://linkedin.com",
+                email: "v.rao@example.iitm.ac.in"
+            },
+                        {
+                name: "XXXXXXXXXXXXXXXXXXXXXXx",
+                title: "Professor,XXXX",
+                description: "Specializes in density functional theory applied to renewable energy materials and batteries.",
+                image: "https://bitmesra.ac.in/UploadedDocuments/userpratimchattaraj/FacultyImage/FacImgee1d4e38b52f4c59a3dadda329ca1da0pratim.jpg",
+                linkedin: "https://linkedin.com",
+                email: "v.rao@example.iitm.ac.in"
+            },
+            {
+                name: "Prof. R. B. Sunoj",
+                title: "Professor, IIT Bombay",
+                description: "Pioneering research in integrating Machine Learning potentials with classical DFT methods.",
+                image: "https://www.chem.iitb.ac.in/sites/default/files/styles/250_x_250/public/pictures/picture-130-1521194002.jpg?itok=M7uVsNP2",
+                linkedin: "https://linkedin.com",
+                email: "ananya.s@example.iitm.ac.in"
+            }
+            // TO ADD ANOTHER SPEAKER, COPY AND PASTE A BLOCK HERE:
+            
+        ];
+        /* 🌟🌟🌟 END OF EASY EDIT SECTION 🌟🌟🌟 */
+
+
+        // -- CODE BELOW GENERATES THE HTML AUTOMATICALLY --
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Generate Speakers Automatically
+            const container = document.getElementById('speakers-container');
+            
+            speakersData.forEach(speaker => {
+                const speakerCard = `
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow duration-300 group">
+                        <div class="h-64 overflow-hidden">
+                            <img src="${speaker.image}" alt="${speaker.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-slate-900">${speaker.name}</h4>
+                            <p class="text-sm font-medium text-orange-600 mb-3">${speaker.title}</p>
+                            <p class="text-slate-600 text-sm mb-5 line-clamp-2">${speaker.description}</p>
+                            <div class="flex items-center space-x-4">
+                                <a href="${speaker.linkedin}" target="_blank" class="flex items-center text-slate-400 hover:text-orange-600 transition-colors" title="LinkedIn Profile">
+                                    <i data-lucide="linkedin" class="w-5 h-5"></i>
+                                </a>
+                                <a href="mailto:${speaker.email}" class="flex items-center text-slate-400 hover:text-orange-600 transition-colors" title="Send Email">
+                                    <i data-lucide="mail" class="w-5 h-5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += speakerCard;
+            });
+
+            // 2. Initialize Icons
+            lucide.createIcons();
+
+            // 3. Mobile Menu Toggle Logic
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                menuIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when clicking a link
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                });
+            });
+        });
+
+        // 4. Schedule Tabs Logic
+        function switchTab(dayId) {
+            // Hide all contents
+            document.querySelectorAll('.day-content').forEach(el => {
+                el.classList.add('hidden');
+            });
+            
+            // Reset all buttons styling
+            document.querySelectorAll('[id^="tab-btn-"]').forEach(el => {
+                el.classList.remove('bg-white', 'text-orange-600', 'shadow-sm');
+                el.classList.add('text-slate-500', 'hover:text-slate-700');
+            });
+
+            // Show selected content
+            document.getElementById('content-' + dayId).classList.remove('hidden');
+            
+            // Highlight selected button
+            const activeBtn = document.getElementById('tab-btn-' + dayId);
+            activeBtn.classList.remove('text-slate-500', 'hover:text-slate-700');
+            activeBtn.classList.add('bg-white', 'text-orange-600', 'shadow-sm');
+        }
     </script>
 </body>
 </html>
