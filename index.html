@@ -25,14 +25,14 @@
         /* Hero Background Slideshow */
         @keyframes heroSlideshow {
             0% { opacity: 1; transform: scale(1); }
-            10% { opacity: 1; transform: scale(1.02); }
-            33% { opacity: 1; transform: scale(1.05); }
-            43% { opacity: 0; transform: scale(1.08); }
-            100% { opacity: 0; transform: scale(1); }
+            20% { opacity: 1; transform: scale(1.05); }
+            25% { opacity: 0; transform: scale(1.08); }
+            95% { opacity: 0; transform: scale(1); }
+            100% { opacity: 1; transform: scale(1); }
         }
         .bg-slide {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            object-fit: cover; opacity: 0; animation: heroSlideshow 15s linear infinite;
+            object-fit: cover; opacity: 0; animation: heroSlideshow 20s linear infinite;
         }
         .bg-slide:nth-child(1) { animation-delay: 0s; }
         .bg-slide:nth-child(2) { animation-delay: 5s; }
@@ -155,12 +155,13 @@
                         Where the future of computational chemistry begins.
                     </h3>
                     
-                    <p class="text-lg text-slate-600 mb-6">
+                    <p class="text-lg text-slate-600 mb-6 text-justify">
                        Over the past several decades, density functional theory (DFT) has emerged as one of the most widely used theoretical frameworks in computational physics, chemistry, and materials science.
                     Its success lies in achieving an exceptional balance between computational efficiency and accuracy in describing ground-state properties of many-electron systems.
                         However, the growing availability of user-friendly computational packages has increasingly led to its use as a “black-box” tool.
                         As a result, the ease of performing calculations has often outpaced a deeper understanding of the underlying theoretical foundations, approximations, and inherent limitations of the method.
-                      
+                    </p>
+                    <p class="text-lg text-slate-600 mb-6 text-justify">
                         A central objective of this workshop is therefore to bridge this gap by emphasizing the fundamental principles of DFT,
                         including exact constraints, formal structure, and known limitations, alongside best practices for its reliable and informed application.
                         The workshop will feature lectures by leading experts in density functional theory and related areas, covering both foundational developments and contemporary applications.
@@ -221,77 +222,10 @@
                 </p>
             </div>
 
-            <div class="flex overflow-x-auto pb-4 mb-8 justify-start md:justify-center no-scrollbar">
-                <div class="bg-slate-100 p-1 rounded-xl inline-flex shadow-inner min-w-max">
-                    <button id="tab-btn-day1" onclick="switchTab('day1')" class="px-6 py-2.5 rounded-lg font-semibold text-sm transition-all bg-white text-orange-600 shadow-sm">Day 1</button>
-                    <button id="tab-btn-day2" onclick="switchTab('day2')" class="px-6 py-2.5 rounded-lg font-semibold text-sm transition-all text-slate-500 hover:text-slate-700">Day 2</button>
-                    <button id="tab-btn-day3" onclick="switchTab('day3')" class="px-6 py-2.5 rounded-lg font-semibold text-sm transition-all text-slate-500 hover:text-slate-700">Day 3</button>
-                    <button id="tab-btn-day4" onclick="switchTab('day4')" class="px-6 py-2.5 rounded-lg font-semibold text-sm transition-all text-slate-500 hover:text-slate-700">Day 4</button>
-                    <button id="tab-btn-day5" onclick="switchTab('day5')" class="px-6 py-2.5 rounded-lg font-semibold text-sm transition-all text-slate-500 hover:text-slate-700">Day 5</button>
-                    <button id="tab-btn-day6" onclick="switchTab('day6')" class="px-6 py-2.5 rounded-lg font-semibold text-sm transition-all text-slate-500 hover:text-slate-700">Day 6</button>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden min-h-[400px]">
-                
-                <div id="content-day1" class="day-content">
-                    <div class="p-4 bg-orange-50/50 border-b border-slate-100 text-orange-700 font-bold text-xs uppercase tracking-widest">Foundations of DFT</div>
-                    
-                    <div class="flex flex-col md:flex-row border-b border-slate-100 p-6 hover:bg-slate-50 transition-colors">
-                        <div class="md:w-48 text-slate-500 font-medium mb-2"><i data-lucide="clock" class="inline w-4 h-4 mr-2"></i>09:00 AM</div>
-                        <div class="flex-grow"><h4 class="text-lg font-bold text-slate-900">Registration & Keynote: Hohenberg-Kohn Theorems</h4></div>
-                    </div>
-                    <div class="flex flex-col md:flex-row border-b border-slate-100 p-6 hover:bg-slate-50 transition-colors">
-                        <div class="md:w-48 text-slate-500 font-medium mb-2"><i data-lucide="clock" class="inline w-4 h-4 mr-2"></i>02:00 PM</div>
-                        <div class="flex-grow"><h4 class="text-lg font-bold text-slate-900">Tutorial: Intro to Unix & VASP Workflows</h4></div>
-                    </div>
-                </div>
-
-                <div id="content-day2" class="day-content hidden">
-                    <div class="p-4 bg-orange-50/50 border-b border-slate-100 text-orange-700 font-bold text-xs uppercase tracking-widest">Kohn-Sham Theory</div>
-                    
-                    <div class="flex flex-col md:flex-row border-b border-slate-100 p-6 hover:bg-slate-50 transition-colors">
-                        <div class="md:w-48 text-slate-500 font-medium mb-2"><i data-lucide="clock" class="inline w-4 h-4 mr-2"></i>10:00 AM</div>
-                        <div class="flex-grow"><h4 class="text-lg font-bold text-slate-900">The Self-Consistent Field (SCF) Loop</h4></div>
-                    </div>
-                </div>
-
-                <div id="content-day3" class="day-content hidden">
-                    <div class="p-4 bg-orange-50/50 border-b border-slate-100 text-orange-700 font-bold text-xs uppercase tracking-widest">Exchange-Correlation</div>
-                    
-                    <div class="flex flex-col md:flex-row border-b border-slate-100 p-6 hover:bg-slate-50 transition-colors">
-                        <div class="md:w-48 text-slate-500 font-medium mb-2"><i data-lucide="clock" class="inline w-4 h-4 mr-2"></i>10:00 AM</div>
-                        <div class="flex-grow"><h4 class="text-lg font-bold text-slate-900">Jacob's Ladder: From LDA to Hybrids</h4></div>
-                    </div>
-                </div>
-
-                <div id="content-day4" class="day-content hidden">
-                    <div class="p-4 bg-orange-50/50 border-b border-slate-100 text-orange-700 font-bold text-xs uppercase tracking-widest">Molecular Dynamics</div>
-                    
-                    <div class="flex flex-col md:flex-row border-b border-slate-100 p-6 hover:bg-slate-50 transition-colors">
-                        <div class="md:w-48 text-slate-500 font-medium mb-2"><i data-lucide="clock" class="inline w-4 h-4 mr-2"></i>09:30 AM</div>
-                        <div class="flex-grow"><h4 class="text-lg font-bold text-slate-900">Ab-initio Molecular Dynamics (AIMD)</h4></div>
-                    </div>
-                </div>
-
-                <div id="content-day5" class="day-content hidden">
-                    <div class="p-4 bg-orange-50/50 border-b border-slate-100 text-orange-700 font-bold text-xs uppercase tracking-widest">Reaction Kinetics</div>
-                    
-                    <div class="flex flex-col md:flex-row border-b border-slate-100 p-6 hover:bg-slate-50 transition-colors">
-                        <div class="md:w-48 text-slate-500 font-medium mb-2"><i data-lucide="clock" class="inline w-4 h-4 mr-2"></i>11:00 AM</div>
-                        <div class="flex-grow"><h4 class="text-lg font-bold text-slate-900">Transition State Search: NEB Methods</h4></div>
-                    </div>
-                </div>
-
-                <div id="content-day6" class="day-content hidden">
-                    <div class="p-4 bg-orange-50/50 border-b border-slate-100 text-orange-700 font-bold text-xs uppercase tracking-widest">Modern Frontiers</div>
-                    
-                    <div class="flex flex-col md:flex-row border-b border-slate-100 p-6 hover:bg-slate-50 transition-colors">
-                        <div class="md:w-48 text-slate-500 font-medium mb-2"><i data-lucide="clock" class="inline w-4 h-4 mr-2"></i>10:00 AM</div>
-                        <div class="flex-grow"><h4 class="text-lg font-bold text-slate-900">Machine Learning Force Fields & Closure</h4></div>
-                    </div>
-                </div>
-
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-12 text-center">
+                <i data-lucide="calendar" class="mx-auto w-12 h-12 text-orange-400 mb-4"></i>
+                <h4 class="text-2xl font-bold text-slate-900 mb-2">Event Schedule will update soon</h4>
+                <p class="text-slate-600 text-lg">We are finalizing the details. Please check back later for the complete day-by-day agenda.</p>
             </div>
         </div>
     </section>
@@ -581,8 +515,10 @@
             
             // Highlight selected button
             const activeBtn = document.getElementById('tab-btn-' + dayId);
-            activeBtn.classList.remove('text-slate-500', 'hover:text-slate-700');
-            activeBtn.classList.add('bg-white', 'text-orange-600', 'shadow-sm');
+            if(activeBtn) {
+                activeBtn.classList.remove('text-slate-500', 'hover:text-slate-700');
+                activeBtn.classList.add('bg-white', 'text-orange-600', 'shadow-sm');
+            }
         }
 
         // 5. ScrollSpy Logic for Orange Navigation Highlighting
