@@ -47,23 +47,26 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <a href="#home" class="flex items-center cursor-pointer">
-                    <img src="image/IWTClogo.jpeg" alt="Workshop Logo" class="h-14 w-auto mr-2 rounded">
+                    <img src="image/IWTClogo.png" alt="Workshop Logo" class="h-14 w-auto mr-2 rounded" onerror="this.src='https://ui-avatars.com/api/?name=IWTC&background=ea580c&color=fff'">
                     
                     <span class="font-bold text-xl tracking-tight text-slate-900">IWTC<sup>2</sup> <span class="text-orange-600">:DFT</span></span>
                 </a>
                 
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#about" class="nav-item text-slate-600 hover:text-orange-600 font-medium transition-colors">About</a>
-                    <a href="#speakers" class="nav-item text-slate-600 hover:text-orange-600 font-medium transition-colors">Speakers</a>
-                    <a href="#schedule" class="nav-item text-slate-600 hover:text-orange-600 font-medium transition-colors">Schedule</a>
-                    <a href="#committee" class="nav-item text-slate-600 hover:text-orange-600 font-medium transition-colors">Committee</a>
-                    <a href="#venue" class="nav-item text-slate-600 hover:text-orange-600 font-medium transition-colors">Venue</a>
+                <div class="hidden xl:flex space-x-6 items-center">
+                    <a href="#about" class="nav-item text-sm text-slate-600 hover:text-orange-600 font-medium transition-colors">About</a>
+                    <a href="#topics" class="nav-item text-sm text-slate-600 hover:text-orange-600 font-medium transition-colors">Topics</a>
+                    <a href="#speakers" class="nav-item text-sm text-slate-600 hover:text-orange-600 font-medium transition-colors">Speakers</a>
+                    <a href="#schedule" class="nav-item text-sm text-slate-600 hover:text-orange-600 font-medium transition-colors">Schedule</a>
+                    <a href="#committee" class="nav-item text-sm text-slate-600 hover:text-orange-600 font-medium transition-colors">Committee</a>
+                    <a href="#patrons" class="nav-item text-sm text-slate-600 hover:text-orange-600 font-medium transition-colors">Patrons</a>
+                    <a href="#contact" class="nav-item text-sm text-slate-600 hover:text-orange-600 font-medium transition-colors">Contact</a>
+                    <a href="#venue" class="nav-item text-sm text-slate-600 hover:text-orange-600 font-medium transition-colors">Venue</a>
                     <a href="#tickets" class="bg-orange-600 text-white px-5 py-2 rounded-full font-medium hover:bg-orange-700 transition-colors shadow-md shadow-orange-200">
-                        Register Now
+                        Register
                     </a>
                 </div>
 
-                <div class="md:hidden flex items-center">
+                <div class="xl:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none">
                         <i data-lucide="menu" id="menu-icon"></i>
                         <i data-lucide="x" id="close-icon" class="hidden"></i>
@@ -72,12 +75,15 @@
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 shadow-lg absolute w-full">
+        <div id="mobile-menu" class="hidden xl:hidden bg-white border-b border-slate-200 shadow-lg absolute w-full max-h-[80vh] overflow-y-auto">
             <div class="px-4 pt-2 pb-6 space-y-2">
                 <a href="#about" class="nav-item mobile-link block w-full text-left px-3 py-3 text-base font-medium text-slate-700 hover:bg-orange-50 hover:text-orange-600 rounded-md">About</a>
+                <a href="#topics" class="nav-item mobile-link block w-full text-left px-3 py-3 text-base font-medium text-slate-700 hover:bg-orange-50 hover:text-orange-600 rounded-md">Topics</a>
                 <a href="#speakers" class="nav-item mobile-link block w-full text-left px-3 py-3 text-base font-medium text-slate-700 hover:bg-orange-50 hover:text-orange-600 rounded-md">Speakers</a>
                 <a href="#schedule" class="nav-item mobile-link block w-full text-left px-3 py-3 text-base font-medium text-slate-700 hover:bg-orange-50 hover:text-orange-600 rounded-md">Schedule</a>
                 <a href="#committee" class="nav-item mobile-link block w-full text-left px-3 py-3 text-base font-medium text-slate-700 hover:bg-orange-50 hover:text-orange-600 rounded-md">Committee</a>
+                <a href="#patrons" class="nav-item mobile-link block w-full text-left px-3 py-3 text-base font-medium text-slate-700 hover:bg-orange-50 hover:text-orange-600 rounded-md">Patrons</a>
+                <a href="#contact" class="nav-item mobile-link block w-full text-left px-3 py-3 text-base font-medium text-slate-700 hover:bg-orange-50 hover:text-orange-600 rounded-md">Contact</a>
                 <a href="#venue" class="nav-item mobile-link block w-full text-left px-3 py-3 text-base font-medium text-slate-700 hover:bg-orange-50 hover:text-orange-600 rounded-md">Venue</a>
                 <a href="#tickets" class="mobile-link block w-full text-center mt-4 px-3 py-3 text-base font-medium text-white bg-orange-600 hover:bg-orange-700 rounded-md shadow-sm">Register Now</a>
             </div>
@@ -86,10 +92,10 @@
 
     <section id="home" class="relative pt-24 pb-20 lg:pt-32 lg:pb-28 overflow-hidden">
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 bg-slate-900">
-            <img src="image/1.jpeg" class="bg-slide" alt="Chemistry visualization slide">
-            <img src="image/2.jpeg" class="bg-slide" alt="Laboratory setup slide">
-            <img src="image/cc1.jpg" class="bg-slide" alt="Computational data slide">
-            <img src="image/chem.jpg" class="bg-slide" alt="Computational data slide">
+            <img src="image/1.jpeg" class="bg-slide" alt="Chemistry visualization slide" onerror="this.src='https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80'">
+            <img src="image/2.jpeg" class="bg-slide" alt="Laboratory setup slide" onerror="this.src='https://images.unsplash.com/photo-1614935151651-0bea6508abb0?auto=format&fit=crop&q=80'">
+            <img src="image/cc1.jpg" class="bg-slide" alt="Computational data slide" onerror="this.src='https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&q=80'">
+            <img src="image/chem.jpg" class="bg-slide" alt="Computational data slide" onerror="this.src='https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&q=80'">
             
             <div class="absolute inset-0 bg-slate-900/50"></div>
             <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-orange-600/30 blur-3xl mix-blend-screen"></div>
@@ -152,40 +158,20 @@
                 <div>
                     <h2 class="text-sm font-bold tracking-widest text-orange-600 uppercase mb-3">About The Workshop</h2>
                     <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
-                        Where the future of computational chemistry begins
                     </h3>
                     
                     <p class="text-lg text-slate-600 mb-6 text-justify">
                        Over the past several decades, density functional theory (DFT) has emerged as one of the most widely used theoretical frameworks in computational physics, chemistry, and materials science.
                     Its success lies in achieving an exceptional balance between computational efficiency and accuracy in describing ground-state properties of many-electron systems.
-                        However, the growing availability of user-friendly computational packages has increasingly led to its use as a “black-box” tool.
-                        As a result, the ease of performing calculations has often outpaced a deeper understanding of the underlying theoretical foundations, approximations, and inherent limitations of the method.
+                       However, the growing availability of user-friendly computational packages has increasingly led to its use as a “black-box” tool.
+                       As a result, the ease of performing calculations has often outpaced a deeper understanding of the underlying theoretical foundations, approximations, and inherent limitations of the method.
                     </p>
                     <p class="text-lg text-slate-600 mb-6 text-justify">
-                        A central objective of this workshop is therefore to bridge this gap by emphasizing the fundamental principles of DFT,
-                        including exact constraints, formal structure, and known limitations, alongside best practices for its reliable and informed application.
-                        The workshop will feature lectures by leading experts in density functional theory and related areas, covering both foundational developments and contemporary applications.
-                        The program will provide hands-on exposure to open-source DFT codes and introduce participants to selected advanced topics, including methods for excited states and many-body perturbation approaches such as the GW approximation.
+                       A central objective of this workshop is therefore to bridge this gap by emphasizing the fundamental principles of DFT,
+                       including exact constraints, formal structure, and known limitations, alongside best practices for its reliable and informed application.
+                       The workshop will feature lectures by leading experts in density functional theory and related areas, covering both foundational developments and contemporary applications.
+                       The program will provide hands-on exposure to open-source DFT codes and introduce participants to selected advanced topics, including methods for excited states and many-body perturbation approaches such as the GW approximation.
                     </p>
-                    
-                    <div class="grid grid-cols-2 gap-6 mt-8">
-                        <div class="border-l-4 border-indigo-500 pl-4">
-                            <p class="text-4xl font-black text-slate-900">10+</p>
-                            <p class="text-sm font-medium text-slate-500 uppercase tracking-wider mt-1">Expert Speakers</p>
-                        </div>
-                        <div class="border-l-4 border-cyan-500 pl-4">
-                            <p class="text-4xl font-black text-slate-900">100+</p>
-                            <p class="text-sm font-medium text-slate-500 uppercase tracking-wider mt-1">Attendees</p>
-                        </div>
-                        <div class="border-l-4 border-purple-500 pl-4">
-                            <p class="text-4xl font-black text-slate-900">6</p>
-                            <p class="text-sm font-medium text-slate-500 uppercase tracking-wider mt-1">Days of Content</p>
-                        </div>
-                        <div class="border-l-4 border-pink-500 pl-4">
-                            <p class="text-4xl font-black text-slate-900">10+</p>
-                            <p class="text-sm font-medium text-slate-500 uppercase tracking-wider mt-1">Lectures</p>
-                        </div>
-                    </div>
                 </div>
                 <div class="relative">
                     <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
@@ -196,13 +182,93 @@
         </div>
     </section>
 
-    <section id="speakers" class="py-20 bg-slate-50 border-t border-slate-100">
+    <section id="topics" class="py-20 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-sm font-bold tracking-widest text-orange-600 uppercase mb-3">Curriculum</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Workshop Topics</h3>
+                <p class="text-lg text-slate-600">
+                    The workshop covers a comprehensive range of topics from foundational to advanced computational applications.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="book-open" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Fundamentals of Density Functional Theory - Part 1: Hohenberg–Kohn theorems, Kohn–Sham equations, exact constraints</h4>
+                    <p class="text-slate-600 leading-relaxed">
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="layers" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Fundamentals of Density Functional Theory - Part 2: Density matrices, exchange–correlation holes, static correlation</h4>
+                    <p class="text-slate-600 leading-relaxed">
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="zap" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Exchange–Correlation and Kinetic Energy Functionals</h4>
+                    <p class="text-slate-600 leading-relaxed">
+                       
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="network" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3"> Periodic Density Functional Theory</h4>
+                    <p class="text-slate-600 leading-relaxed">
+                      
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-rose-100 text-rose-600 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="terminal" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Chemical Applications of DFT and Best Practices</h4>
+                    <p class="text-slate-600 leading-relaxed">
+                       
+                    </p>
+                </div>
+				
+				<div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                   <div class="w-12 h-12 bg-rose-100 text-rose-600 rounded-xl flex items-center justify-center mb-6">
+                       <i data-lucide="atom" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">GW Methods for Molecular and Periodic Systems</h4>
+                    <p class="text-slate-600 leading-relaxed">        
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="flask-conical" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Time-Dependent and Time-Independent Approaches for Excited States</h4>
+                    <p class="text-slate-600 leading-relaxed">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="speakers" class="py-20 bg-white border-t border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-sm font-bold tracking-widest text-orange-600 uppercase mb-3">Instructors</h2>
                 <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Workshop Speakers</h3>
                 <p class="text-lg text-slate-600">
-                    Learn directly from leading researchers and experts in computational chemistry and materials science.
+
                 </p>
                 </div>
 
@@ -212,7 +278,7 @@
         </div>
     </section>
 
-    <section id="schedule" class="py-20 bg-white">
+    <section id="schedule" class="py-20 bg-slate-50 border-t border-slate-100">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-sm font-bold tracking-widest text-orange-600 uppercase mb-3">Agenda</h2>
@@ -230,48 +296,85 @@
         </div>
     </section>
 
-    <section id="committee" class="py-20 bg-slate-50 border-t border-slate-100">
+    <section id="committee" class="py-20 bg-white border-t border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-sm font-bold tracking-widest text-orange-600 uppercase mb-3">The Team</h2>
                 <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Organizing Committee</h3>
             </div>
+			
+            <div id="committee-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+                </div>
+        </div>
+    </section>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <img src="image/subu.jpg" alt="Dr. Soumen Ghosh" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover shadow-md">
-                    <h4 class="text-lg font-bold text-slate-900">Prof. V. Subramanian</h4>
-                    <p class="text-sm text-orange-600 font-medium">IIT Madras</p>
+    <section id="patrons" class="py-20 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-sm font-bold tracking-widest text-orange-600 uppercase mb-3"></h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Patrons</h3>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
+                <div class="text-center bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <img src="https://heritage.iitm.ac.in/sites/default/files/2022-03/prof-kamakoti.png" alt="Prof. V. Kamakoti" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover shadow-md">
+                    <h4 class="text-xl font-bold text-slate-900">Prof. V. Kamakoti</h4>
+                    <p class="text-sm text-orange-600 font-medium">Director, IIT Madras</p>
+                    <div class="mt-3 inline-block bg-orange-100 text-orange-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider"></div>
                 </div>
                 
-                <div class="text-center">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUWBqzUfETCr6ONUSFjEuIDCm20d0S-s51u9RBhREf3rAsxp5fsYmaLPU&s" alt="Dr. Sunita Patel" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover shadow-md">
-                    <h4 class="text-lg font-bold text-slate-900">Prof. Sanjay Kumar</h4>
-                    <p class="text-sm text-orange-600 font-medium">IIT Madras</p>
+                <div class="text-center bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbptHDSXgIIL-lwGM3yWVCF7WgLmuWsVuB2w&s" alt="Head of Department" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover shadow-md">
+                    <h4 class="text-xl font-bold text-slate-900">Prof. G. Sekar</h4>
+                    <p class="text-sm text-orange-600 font-medium">Head, Department of Chemistry, IIT Madras</p>
+                    <div class="mt-3 inline-block bg-orange-100 text-orange-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider"></div>
                 </div>
-                
-                <div class="text-center">
-                    <img src="image/ycs.jpg" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover shadow-md">
-                    <h4 class="text-lg font-bold text-slate-900">Dr. Yamijala S. R. K. C. Sharma</h4>
-                    <p class="text-sm text-orange-600 font-medium">IIT Madras</p>
-                </div>
+            </div>
+        </div>
+    </section>
 
-                 <div class="text-center">
-                    <img src="image/soorajK.jpg" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover shadow-md">
-                    <h4 class="text-lg font-bold text-slate-900">Dr. Sooraj Kunnikuruvan</h4>
-                    <p class="text-sm text-orange-600 font-medium">IIT Madras</p>
-                </div>
+    <section id="contact" class="py-20 bg-white border-t border-slate-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-sm font-bold tracking-widest text-orange-600 uppercase mb-3">Get in Touch</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Contact Information</h3>
+                <p class="text-lg text-slate-600">Have questions about the workshop, registration, or travel? Reach out to us.</p>
+            </div>
 
-                <div class="text-center">
-                    <img src="image/nandi.jpg" alt="Karthik R." class="w-32 h-32 rounded-full mx-auto mb-4 object-cover shadow-md">
-                    <h4 class="text-lg font-bold text-slate-900">Dr. Krishna R. Nandipati</h4>
-                    <p class="text-sm text-orange-600 font-medium">IIT Madras</p>
-                </div>
-                
-                <div class="text-center">
-                    <img src="image/somen.jpg" alt="Arjun Menon" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover shadow-md">
-                    <h4 class="text-lg font-bold text-slate-900">Dr. Soumen Ghosh</h4>
-                    <p class="text-sm text-orange-600 font-medium">IIT Madras</p>
+            <div class="bg-orange-50/50 p-8 md:p-10 rounded-2xl border border-orange-100 shadow-sm max-w-3xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="flex items-start">
+                        <div class="bg-white p-3 rounded-full shadow-sm mr-4 text-orange-600">
+                            <i data-lucide="mail" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-slate-500 mb-1">Email Us</p>
+                            <a href="mailto:dftworkshop@gmail.com" class="text-lg text-orange-600 hover:text-orange-700 transition-colors font-semibold">dftworkshop@gmail.com</a>                            
+		                    <a href="mailto:chemsghosh@gmail.com" class="text-lg text-orange-600 hover:text-orange-700 transition-colors font-semibold">chemsghosh@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-white p-3 rounded-full shadow-sm mr-4 text-orange-600">
+                            <i data-lucide="phone-call" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-slate-500 mb-1">Call Us</p>
+                            <p class="text-lg text-slate-800 font-medium">+91 44 2257 4244</p>
+                            <p class="text-sm text-slate-500">(Dr. Soumen Ghosh)</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start md:col-span-2">
+                        <div class="bg-white p-3 rounded-full shadow-sm mr-4 text-orange-600">
+                            <i data-lucide="users" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-slate-500 mb-1">Workshop Coordinators</p>
+                            <p class="text-lg text-slate-800 font-medium">Dr. Soumen Ghosh</p>
+                            <p class="text-lg text-slate-800 font-medium mt-1">    </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -297,7 +400,7 @@
                     </div>
                 </div>
                 <div class="relative h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-white/10">
-                    <img src="image/chem.jpg" alt="IIT Madras Campus" class="w-full h-full object-cover" />
+                    <img src="image/chem.jpg" alt="IIT Madras Campus" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&q=80'" />
                 </div>
             </div>
         </div>
@@ -308,7 +411,7 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <div class="md:col-span-2">
                     <div class="flex items-center mb-4 justify-center md:justify-start">
-                        <img src="image/IWTClogo.jpeg" alt="Workshop Logo" class="h-20 w-auto mr-2 rounded">
+                        <img src="image/IWTClogo.png" alt="Workshop Logo" class="h-20 w-auto mr-2 rounded" onerror="this.src='https://ui-avatars.com/api/?name=IWTC&background=ea580c&color=fff'">
                         
                         <span class="font-bold text-xl text-white">IWTC<sup>2</sup> <span class="text-orange-500">:DFT</span></span>
                     </div>
@@ -318,14 +421,17 @@
                     <h4 class="text-white font-bold mb-4">Links</h4>
                     <ul class="space-y-2">
                         <li><a href="#about" class="hover:text-orange-400">About</a></li>
+                        <li><a href="#topics" class="hover:text-orange-400">Workshop Topics</a></li>
                         <li><a href="#speakers" class="hover:text-orange-400">Speakers</a></li>
                         <li><a href="#schedule" class="hover:text-orange-400">Schedule</a></li>
                         <li><a href="#committee" class="hover:text-orange-400">Committee</a></li>
+                        <li><a href="#patrons" class="hover:text-orange-400">Patrons</a></li>
+                        <li><a href="#contact" class="hover:text-orange-400">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
             
-			   <div class="border-t border-white/10 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
+               <div class="border-t border-white/10 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
                <p>&copy; 2026 Department of Chemistry, IIT Madras. All rights reserved.</p>
                <p class="mt-2 md:mt-0">
                <a href="https://www.linkedin.com/in/mburagohain/" target="_blank" class="hover:text-white transition">
@@ -338,15 +444,50 @@
 
 
     <script>
-        /* 🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
-        EASY EDIT SECTION: ADD, REMOVE, OR MODIFY SPEAKERS HERE
-        🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
-        
-        To add a new speaker, simply copy one of the blocks surrounded by { ... },
-        paste it below the last one, and change the text inside the quotes (" ").
-        Make sure every block (except the last one) ends with a comma!
-        */
+        /* 🌟🌟🌟 EASY EDIT COMMITTEE SECTION 🌟🌟🌟 */
+        const committeeData = [
+		    {
+                name: "Dr. Krishna R. Nandipati",
+                role: "IIT Madras",
+                image: "image/nandi.jpg"
+            },
+            {
+                name: "Prof. Sanjay Kumar",
+                role: "IIT Madras",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUWBqzUfETCr6ONUSFjEuIDCm20d0S-s51u9RBhREf3rAsxp5fsYmaLPU&s"
+            },
+            {
+                name: "Dr. Sooraj Kunnikuruvan",
+                role: "IIT Madras",
+                image: "image/soorajK.jpg"
+            },
+            {
+                name: "Dr. Soumen Ghosh",
+                role: "IIT Madras",
+                image: "image/somen.jpg"
+            },
+			{
+                name: "Prof. V. Subramanian",
+                role: "IIT Madras",
+                image: "image/subu.jpg"
+            },
+            {
+                name: "Dr. Yamijala S. R. K. C. Sharma",
+                role: "IIT Madras",
+                image: "image/ycs.jpg"
+            }
+        ];
+
+        /* 🌟🌟🌟 EASY EDIT SPEAKERS SECTION 🌟🌟🌟 */
         const speakersData = [
+		    {
+                name: "Prof. H Georg Schreckenbach",
+                title: "Professor, University of Manitoba Canada",
+                description: "Specializes in density functional theory and advanced quantum chemical methods applied to molecules, materials, surfaces, and solids.",
+                image: "https://umanitoba.ca/science/sites/science/files/styles/3x2_900w/public/2024-05/hans-schreckenbach.jpg?itok=4R6xmFKV",
+                linkedin: "https://linkedin.com",
+                email: "v.rao@example.iitm.ac.in"
+            },
             {
                 name: "Prof. K D Sen",
                 title: "Professor, University of Hyderabad",
@@ -354,6 +495,30 @@
                 image: "https://herald.uohyd.ac.in/wp-content/uploads/2020/10/KDSen-300x300.jpg",
                 linkedin: "https://linkedin.com",
                 email: "priya.n@example.iitm.ac.in"
+            },
+			{
+                name: "Prof. Manoj Harbola",
+                title: "Professor,IIT Kanpur",
+                description: "He is a theoretical physicist specializing in the electronic structure of atoms, molecules, and solids using density functional methods.",
+                image: "https://www.iitk.ac.in/data/media/faculty/manoj-k-harbola_0.jpg",
+                linkedin: "https://linkedin.com",
+                email: "v.rao@example.iitm.ac.in"
+            },
+		    {
+                name: "Prof. Nisanth Nair",
+                title: "Professor, IIT Kanpur",
+                description: "Focuses on ab initio molecular dynamics, free energy methods, and hybrid QM/MM techniques to study reactions in solutions, enzymes, and solid catalysts, with applications in antibiotic resistance, zeolite catalysis, and polymer design.",
+                image: "https://home.iitk.ac.in/~nnair/nisanth_photo.jpg",
+                linkedin: "https://linkedin.com",
+                email: "v.rao@example.iitm.ac.in"
+            },
+			            {
+                name: "Prof. Prasanjit Samal",
+                title: "Professor, NISER Bhubaneswar",
+                description: "Specializes in condensed matter physics and atomic and molecular physics.",
+                image: "https://www.niser.ac.in/~psamal/images/Prasanjit.jpg",
+                linkedin: "https://linkedin.com",
+                email: "v.rao@example.iitm.ac.in"
             },
             {
                 name: "Prof. Pratim K. Chattaraj",
@@ -363,22 +528,23 @@
                 linkedin: "https://linkedin.com",
                 email: "v.rao@example.iitm.ac.in"
             },
-            {
-                name: "Prof. Nisanth Nair",
-                title: "Professor, IIT Kanpur",
-                description: "Focuses on ab initio molecular dynamics, free energy methods, and hybrid QM/MM techniques to study reactions in solutions, enzymes, and solid catalysts, with applications in antibiotic resistance, zeolite catalysis, and polymer design.",
-                image: "https://home.iitk.ac.in/~nnair/nisanth_photo.jpg",
+           {
+                name: "Prof. R. B. Sunoj",
+                title: "Professor, IIT Bombay",
+                description: "Specializes in computational chemistry and machine learning for catalytic reactions, focusing on asymmetric and multi-catalytic transformations, reaction mechanisms, noncovalent interactions, and ML-guided reaction discovery.",
+                image: "https://www.chem.iitb.ac.in/sites/default/files/styles/250_x_250/public/pictures/picture-130-1521194002.jpg?itok=M7uVsNP2",
+                linkedin: "https://linkedin.com",
+                email: "ananya.s@example.iitm.ac.in"
+            },
+			            {
+                name: "Prof. Satya Bulusu, IIT Indore",
+                title: "Professor, IIT Indore",
+                description: "Specializes in developing machine learning methods, modeling atomic environments, designing sampling algorithms, and leveraging high-performance computing for large-scale chemical simulations.",
+                image: "https://chemistry.iiti.ac.in/storage/faculty/1751541370_profile.JPG",
                 linkedin: "https://linkedin.com",
                 email: "v.rao@example.iitm.ac.in"
             },
-            {
-                name: "Prof. Manoj Harbola",
-                title: "Professor,IIT Kanpur",
-                description: "He is a theoretical physicist specializing in the electronic structure of atoms, molecules, and solids using density functional methods.",
-                image: "https://www.iitk.ac.in/data/media/faculty/manoj-k-harbola_0.jpg",
-                linkedin: "https://linkedin.com",
-                email: "v.rao@example.iitm.ac.in"
-            },
+
             {
                 name: "Prof. Shobhana Narasimhan",
                 title: "Professor, JNCASR",
@@ -388,74 +554,44 @@
                 email: "v.rao@example.iitm.ac.in"
             },
             {
-                name: "Dr. Niranjan Govind, PNNL USA",
-                title: "Professor, PNNL USA",
+                name: "Prof. Vamsee Voora",
+                title: "Professor, TIFR Mumbai",
                 description: "Specializes in electronic structure theory (DFT/TDDFT, GW/BSE), real-time excited-state dynamics, computational spectroscopies, molecular dynamics, and advanced methods for chemical physics, catalysis, and materials science.",
-                image: "https://www.pnnl.gov/sites/default/files/styles/portrait/public/media/image/Web%20Size-Govind_Niri-2.jpg?h=96e802cb&itok=-o4qvEgm",
+                image: "https://www.chem.iitb.ac.in/sites/default/files/styles/medium/public/voora.jpg?itok=wlP0uqZC",
                 linkedin: "https://linkedin.com",
                 email: "v.rao@example.iitm.ac.in"
-            },
-            {
-                name: "Prof. Satya Bulusu, IIT Indore",
-                title: "Professor, IIT Indore",
-                description: "Specializes in developing machine learning methods, modeling atomic environments, designing sampling algorithms, and leveraging high-performance computing for large-scale chemical simulations.",
-                image: "https://chemistry.iiti.ac.in/storage/faculty/1751541370_profile.JPG",
-                linkedin: "https://linkedin.com",
-                email: "v.rao@example.iitm.ac.in"
-            },
-            {
-                name: "Prof. Prasanjit Samal",
-                title: "Professor, NISER Bhbaneswar",
-                description: "Specializes in condensed matter physics and atomic and molecular physics.",
-                image: "https://www.niser.ac.in/~psamal/images/Prasanjit.jpg",
-                linkedin: "https://linkedin.com",
-                email: "v.rao@example.iitm.ac.in"
-            },
-            {
-                name: "Prof. H Georg Schreckenbach",
-                title: "Professor, University of Manitoba Canada",
-                description: "Specializes in density functional theory and advanced quantum chemical methods applied to molecules, materials, surfaces, and solids.",
-                image: "https://umanitoba.ca/science/sites/science/files/styles/3x2_900w/public/2024-05/hans-schreckenbach.jpg?itok=4R6xmFKV",
-                linkedin: "https://linkedin.com",
-                email: "v.rao@example.iitm.ac.in"
-            },
-            {
-                name: "Prof. R. B. Sunoj",
-                title: "Professor, IIT Bombay",
-                description: "Specializes in computational chemistry and machine learning for catalytic reactions, focusing on asymmetric and multi-catalytic transformations, reaction mechanisms, noncovalent interactions, and ML-guided reaction discovery.",
-                image: "https://www.chem.iitb.ac.in/sites/default/files/styles/250_x_250/public/pictures/picture-130-1521194002.jpg?itok=M7uVsNP2",
-                linkedin: "https://linkedin.com",
-                email: "ananya.s@example.iitm.ac.in"
             }
-            // TO ADD ANOTHER SPEAKER, COPY AND PASTE A BLOCK HERE:
-            
         ];
-        /* 🌟🌟🌟 END OF EASY EDIT SECTION 🌟🌟🌟 */
 
 
-        // -- CODE BELOW GENERATES THE HTML AUTOMATICALLY --
         document.addEventListener('DOMContentLoaded', () => {
-            // 1. Generate Speakers Automatically
+            // 1. Generate Committee Members
+            const committeeContainer = document.getElementById('committee-container');
+            committeeData.forEach(member => {
+                committeeContainer.innerHTML += `
+                    <div class="text-center group">
+                        <div class="relative inline-block mb-4">
+                            <div class="absolute inset-0 bg-orange-600 rounded-full blur opacity-0 group-hover:opacity-20 transition-opacity"></div>
+                            <img src="${member.image}" alt="${member.name}" 
+                                 class="relative w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto object-cover shadow-md border-4 border-white group-hover:border-orange-50 transition-all" 
+                                 onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=e2e8f0&color=475569'">
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 group-hover:text-orange-600 transition-colors">${member.name}</h4>
+                        <p class="text-sm text-slate-500 font-medium">${member.role}</p>
+                    </div>
+                `;
+            });
+
+            // 2. Generate Speakers Automatically
             const container = document.getElementById('speakers-container');
-            
-            // List of soft background colors for the cards
-            const cardColors = [
-                'bg-orange-50',
-                'bg-blue-50',
-                'bg-emerald-50',
-                'bg-purple-50',
-                'bg-rose-50',
-                'bg-amber-50'
-            ];
+            const cardColors = ['bg-orange-50', 'bg-blue-50', 'bg-emerald-50', 'bg-purple-50', 'bg-rose-50', 'bg-amber-50'];
             
             speakersData.forEach((speaker, index) => {
-                // This automatically picks the next color in the list, and loops back to the start if needed!
                 const cardColor = cardColors[index % cardColors.length];
-
                 const speakerCard = `
                     <div class="${cardColor} rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow duration-300 group">
                         <div class="h-64 overflow-hidden bg-white flex justify-center items-center p-4">
-                            <img src="${speaker.image}" alt="${speaker.name}" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                            <img src="${speaker.image}" alt="${speaker.name}" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(speaker.name)}&background=e2e8f0&color=475569'">
                         </div>
                         <div class="p-6">
                             <h4 class="text-xl font-bold text-slate-900">${speaker.name}</h4>
@@ -474,10 +610,10 @@
                 container.innerHTML += speakerCard;
             });
 
-            // 2. Initialize Icons
+            // 3. Initialize Icons
             lucide.createIcons();
 
-            // 3. Mobile Menu Toggle Logic
+            // 4. Mobile Menu Toggle Logic
             const menuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             const menuIcon = document.getElementById('menu-icon');
@@ -489,7 +625,6 @@
                 closeIcon.classList.toggle('hidden');
             });
             
-            // Close mobile menu when clicking a link
             const mobileLinks = document.querySelectorAll('.mobile-link');
             mobileLinks.forEach(link => {
                 link.addEventListener('click', () => {
@@ -500,38 +635,14 @@
             });
         });
 
-        // 4. Schedule Tabs Logic
-        function switchTab(dayId) {
-            // Hide all contents
-            document.querySelectorAll('.day-content').forEach(el => {
-                el.classList.add('hidden');
-            });
-            
-            // Reset all buttons styling
-            document.querySelectorAll('[id^="tab-btn-"]').forEach(el => {
-                el.classList.remove('bg-white', 'text-orange-600', 'shadow-sm');
-                el.classList.add('text-slate-500', 'hover:text-slate-700');
-            });
-
-            // Show selected content
-            document.getElementById('content-' + dayId).classList.remove('hidden');
-            
-            // Highlight selected button
-            const activeBtn = document.getElementById('tab-btn-' + dayId);
-            if(activeBtn) {
-                activeBtn.classList.remove('text-slate-500', 'hover:text-slate-700');
-                activeBtn.classList.add('bg-white', 'text-orange-600', 'shadow-sm');
-            }
-        }
-
-        // 5. ScrollSpy Logic for Orange Navigation Highlighting
+        // 5. ScrollSpy Logic
         const sections = document.querySelectorAll("section");
         const navLinks = document.querySelectorAll(".nav-item");
 
         window.addEventListener("scroll", () => {
             let current = "";
             sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100; // Account for the sticky header
+                const sectionTop = section.offsetTop - 100;
                 const sectionHeight = section.clientHeight;
                 if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
                     current = section.getAttribute("id");
