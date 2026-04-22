@@ -226,7 +226,7 @@
                     </div>
                     <h4 class="text-xl font-bold text-slate-900 mb-3"> Periodic Density Functional Theory</h4>
                     <p class="text-slate-600 leading-relaxed">
-                       
+                        
                     </p>
                 </div>
 
@@ -343,13 +343,14 @@
             <div class="bg-orange-50/50 p-8 md:p-10 rounded-2xl border border-orange-100 shadow-sm max-w-3xl mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="flex items-start">
-                        <div class="bg-white p-3 rounded-full shadow-sm mr-4 text-orange-600">
-                            <i data-lucide="mail" class="w-6 h-6"></i>
+                        <div class="bg-white p-3 rounded-full shadow-sm mr-4 text-red-600">
+                            <!-- Robust Inline SVG for Mail -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                         </div>
                         <div>
                             <p class="text-sm font-semibold uppercase tracking-wide text-slate-500 mb-1">Email Us</p>
-                            <a href="mailto:dftworkshop26@gmail.com" class="text-lg text-orange-600 hover:text-orange-700 transition-colors font-semibold">dftworkshop26@gmail.com</a>                            
-                            <a href="mailto:chemsghosh@gmail.com" class="text-lg text-orange-600 hover:text-orange-700 transition-colors font-semibold">chemsghosh@gmail.com</a>
+                            <a href="mailto:dftworkshop26@gmail.com" class="text-lg text-red-600 hover:text-red-700 transition-colors font-semibold">dftworkshop26@gmail.com</a>                            
+                            <a href="mailto:chemsghosh@gmail.com" class="text-lg text-red-600 hover:text-red-700 transition-colors font-semibold">chemsghosh@gmail.com</a>
                         </div>
                     </div>
                     
@@ -375,6 +376,18 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sponsors" class="py-20 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-sm font-bold tracking-widest text-orange-600 uppercase mb-3">Supported By</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our Sponsors</h3>
+            </div>
+            <div id="sponsors-container" class="flex flex-wrap justify-center items-center gap-12 md:gap-24">
+                <!-- Dynamically generated sponsors will appear here -->
             </div>
         </div>
     </section>
@@ -641,6 +654,20 @@
             }
         ];
 
+        /* 🌟🌟🌟 EASY EDIT SPONSORS SECTION 🌟🌟🌟 */
+        const sponsorsData = [
+            {
+                name: "CSIR",
+                image: "https://upload.wikimedia.org/wikipedia/commons/6/60/CSIR-Logo-With-Tagline-Seleceted-Bilingual.png",
+                fallbackName: "CSIR"
+            },
+            {
+                name: "Netweb",
+                image: "https://www.netwebindia.com/img/logo/logo.png",
+                fallbackName: "NETWEB"
+            }
+        ];
+
 
         document.addEventListener('DOMContentLoaded', () => {
             // 1. Generate Committee Members
@@ -675,11 +702,13 @@
                             <h4 class="text-xl font-bold text-slate-900">${speaker.name}</h4>
                             <p class="text-sm font-medium text-orange-600 mb-5">${speaker.title}</p>
                             <div class="flex items-center space-x-4">
-                                <a href="${speaker.linkedin}" target="_blank" class="flex items-center text-slate-400 hover:text-orange-600 transition-colors" title="LinkedIn Profile">
-                                    <i data-lucide="linkedin" class="w-5 h-5"></i>
+                                <a href="${speaker.linkedin}" target="_blank" class="flex items-center text-red-600 hover:text-red-800 transition-colors" title="LinkedIn Profile">
+                                    <!-- Robust Inline SVG for LinkedIn -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
                                 </a>
-                                <a href="mailto:${speaker.email}" class="flex items-center text-slate-400 hover:text-orange-600 transition-colors" title="Send Email">
-                                    <i data-lucide="mail" class="w-5 h-5"></i>
+                                <a href="mailto:${speaker.email}" class="flex items-center text-red-600 hover:text-red-800 transition-colors" title="Send Email">
+                                    <!-- Robust Inline SVG for Mail -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                                 </a>
                             </div>
                         </div>
@@ -688,10 +717,20 @@
                 container.innerHTML += speakerCard;
             });
 
-            // 3. Initialize Icons
+            // 3. Generate Sponsors Automatically
+            const sponsorsContainer = document.getElementById('sponsors-container');
+            sponsorsData.forEach(sponsor => {
+                sponsorsContainer.innerHTML += `
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex items-center justify-center w-64 h-40">
+                        <img src="${sponsor.image}" alt="${sponsor.name}" class="max-h-24 max-w-full object-contain" onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(sponsor.fallbackName)}&background=fff&color=ea580c'">
+                    </div>
+                `;
+            });
+
+            // 4. Initialize Icons (CRITICAL: Must be after all dynamic content is injected)
             lucide.createIcons();
 
-            // 4. Mobile Menu Toggle Logic
+            // 5. Mobile Menu Toggle Logic
             const menuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             const menuIcon = document.getElementById('menu-icon');
@@ -712,7 +751,7 @@
                 });
             });
 
-            // 5. ScrollSpy Logic
+            // 6. ScrollSpy Logic
             const sections = document.querySelectorAll("section");
             const navLinks = document.querySelectorAll(".nav-item:not(.register-trigger)");
 
@@ -734,7 +773,7 @@
                 });
             });
 
-            // 6. Modal Popup Logic
+            // 7. Modal Popup Logic
             const modal = document.getElementById('registrationModal');
             const modalOverlay = document.getElementById('modalOverlay');
             const btnCloseModal = document.getElementById('closeModalBtn');
