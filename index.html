@@ -267,17 +267,27 @@
                 <h2 class="text-sm font-bold tracking-widest text-orange-600 uppercase mb-3">Instructors</h2>
                 <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Workshop Speakers</h3>
                 <p class="text-lg text-slate-600">
-
                 </p>
-                </div>
-
+            </div>
             <div id="speakers-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                </div>
-            
+            </div>
         </div>
     </section>
 
-    <section id="schedule" class="py-20 bg-slate-50 border-t border-slate-100">
+    <section id="special-lectures" class="py-20 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-sm font-bold tracking-widest text-orange-600 uppercase mb-3">Guest Instructors</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Special Lectures on Quantum Dynamics</h3>
+                <p class="text-lg text-slate-600">
+                </p>
+            </div>
+            <div id="special-lectures-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            </div>
+        </div>
+    </section>
+
+    <section id="schedule" class="py-20 bg-white border-t border-slate-100">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-sm font-bold tracking-widest text-orange-600 uppercase mb-3">Agenda</h2>
@@ -287,10 +297,22 @@
                 </p>
             </div>
 
-            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-12 text-center">
+            <div class="bg-slate-50 rounded-2xl border border-slate-200 shadow-sm p-12 text-center">
                 <i data-lucide="calendar" class="mx-auto w-12 h-12 text-orange-400 mb-4"></i>
                 <h4 class="text-2xl font-bold text-slate-900 mb-2">Event Schedule will update soon</h4>
                 <p class="text-slate-600 text-lg">We are finalizing the details. Please check back later for the complete day-by-day agenda.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sponsors" class="py-20 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-sm font-bold tracking-widest text-orange-600 uppercase mb-3"> </h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our Sponsors</h3>
+            </div>
+            <div id="sponsors-container" class="flex flex-wrap justify-center items-center gap-12 md:gap-24">
+                <!-- Dynamically generated sponsors will appear here -->
             </div>
         </div>
     </section>
@@ -350,7 +372,7 @@
                         <div>
                             <p class="text-sm font-semibold uppercase tracking-wide text-slate-500 mb-1">Email Us</p>
                             <a href="mailto:dftworkshop26@gmail.com" class="text-lg text-red-600 hover:text-red-700 transition-colors font-semibold">dftworkshop26@gmail.com</a>                            
-                            <a href="mailto:chemsghosh@gmail.com" class="text-lg text-red-600 hover:text-red-700 transition-colors font-semibold">chemsghosh@gmail.com</a>
+                            <a href="mailto:chemsghosh@gmail.com" class="text-lg text-red-600 hover:text-red-700 transition-colors font-semibold block">chemsghosh@gmail.com</a>
                         </div>
                     </div>
                     
@@ -376,18 +398,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="sponsors" class="py-20 bg-slate-50 border-t border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-sm font-bold tracking-widest text-orange-600 uppercase mb-3"> </h2>
-                <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our Sponsors</h3>
-            </div>
-            <div id="sponsors-container" class="flex flex-wrap justify-center items-center gap-12 md:gap-24">
-                <!-- Dynamically generated sponsors will appear here -->
             </div>
         </div>
     </section>
@@ -425,7 +435,7 @@
                     <div class="flex items-center mb-4 justify-center md:justify-start">
                         <img src="image/IWTClogo.jpeg" alt="Workshop Logo" class="h-20 w-auto mr-2 rounded" onerror="this.src='https://ui-avatars.com/api/?name=IWTC&background=ea580c&color=fff'">
                         
-                        <span class="font-bold text-xl text-white">IWTC<sup>2</sup> <span class="text-orange-500">:DFT</span></span>
+                        <span class="font-bold text-xl text-white ml-2">IWTC<sup>2</sup> <span class="text-orange-500">:DFT</span></span>
                     </div>
                     <p class="mb-6 max-w-sm mx-auto md:mx-0">Organized by the Department of Chemistry, IIT Madras.</p>
                 </div>
@@ -611,7 +621,7 @@
                 linkedin: "https://linkedin.com",
                 email: "v.rao@example.iitm.ac.in"
             },
-           {
+            {
                 name: "Prof. R. B. Sunoj",
                 title: "Professor, IIT Bombay",
                 description: "Specializes in computational chemistry and machine learning for catalytic reactions, focusing on asymmetric and multi-catalytic transformations, reaction mechanisms, noncovalent interactions, and ML-guided reaction discovery.",
@@ -627,20 +637,19 @@
                 linkedin: "https://linkedin.com",
                 email: "v.rao@example.iitm.ac.in"
             },
-
-            {
-                name: "Prof. Shobhana Narasimhan",
-                title: "Professor, JNCASR",
-                description: "Specializes in computational nanoscience.",
-                image: "https://www.jncasr.ac.in/sites/default/files/Faculty-Profile/2021-02/Shobhana.jpg",
-                linkedin: "https://linkedin.com",
-                email: "v.rao@example.iitm.ac.in"
-            },
             {
                 name: "Prof. Sourav Pal",
                 title: "Professor, Ashoka University",
                 description: "Specializes in computational nanoscience.",
                 image: "https://www.ashoka.edu.in/wp-content/uploads/2021/04/Untitled-design-2021-07-09T230742.730.png",
+                linkedin: "https://linkedin.com",
+                email: "v.rao@example.iitm.ac.in"
+            },
+            {
+                name: "Prof. Swapan Kumar Ghosh",
+                title: "Professor",
+                description: "Specializes in density functional theory, fluid dynamics, and computational chemistry.",
+                image: "https://fellows.ias.ac.in/img/profile/FL1991009.jpg",
                 linkedin: "https://linkedin.com",
                 email: "v.rao@example.iitm.ac.in"
             },
@@ -651,6 +660,50 @@
                 image: "https://www.chem.iitb.ac.in/sites/default/files/styles/medium/public/voora.jpg?itok=wlP0uqZC",
                 linkedin: "https://linkedin.com",
                 email: "v.rao@example.iitm.ac.in"
+            },
+            {
+                name: "Dr. Vibin Abraham",
+                title: "Postdoctoral Research Associate, PNNL",
+                description: "Specializes in computational chemistry and electronic structure theory.",
+                image: "https://vibinabraham.github.io/assets/img/profile.jpg",
+                linkedin: "https://linkedin.com",
+                email: "v.rao@example.iitm.ac.in"
+            }
+        ];
+
+        /* 🌟🌟🌟 SPECIAL LECTURES SECTION 🌟🌟🌟 */
+        const specialLecturesData = [
+            {
+                name: "Prof. N Sathyamurthy",
+                title: "Professor",
+                description: "Expert in Quantum Dynamics and Molecular Collisions.",
+                image: "",
+                linkedin: "https://linkedin.com",
+                email: "contact@example.com"
+            },
+            {
+                name: "Prof. Satrajit Adhikari",
+                title: "Professor",
+                description: "Expert in Quantum Dynamics and non-adiabatic interactions.",
+                image: "",
+                linkedin: "https://linkedin.com",
+                email: "contact@example.com"
+            },
+            {
+                name: "Prof. Sushanta Mahapatra",
+                title: "Professor",
+                description: "Expert in Quantum Dynamics and computational chemistry.",
+                image: "",
+                linkedin: "https://linkedin.com",
+                email: "contact@example.com"
+            },
+            {
+                name: "Prof. T. J. Dhilip Kumar",
+                title: "Professor",
+                description: "Expert in Quantum Dynamics and electronic structure.",
+                image: "",
+                linkedin: "https://linkedin.com",
+                email: "contact@example.com"
             }
         ];
 
@@ -665,9 +718,13 @@
                 name: "Netweb",
                 image: "https://www.netwebindia.com/img/logo/logo.png",
                 fallbackName: "NETWEB"
+            },
+            {
+                name: "ANRF",
+                image: "https://www.anrf.gov.in/assets/img/logo.png",
+                fallbackName: "ANRF"
             }
         ];
-
 
         document.addEventListener('DOMContentLoaded', () => {
             // 1. Generate Committee Members
@@ -703,11 +760,9 @@
                             <p class="text-sm font-medium text-orange-600 mb-5">${speaker.title}</p>
                             <div class="flex items-center space-x-4">
                                 <a href="${speaker.linkedin}" target="_blank" class="flex items-center text-red-600 hover:text-red-800 transition-colors" title="LinkedIn Profile">
-                                    <!-- Robust Inline SVG for LinkedIn -->
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
                                 </a>
                                 <a href="mailto:${speaker.email}" class="flex items-center text-red-600 hover:text-red-800 transition-colors" title="Send Email">
-                                    <!-- Robust Inline SVG for Mail -->
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                                 </a>
                             </div>
@@ -717,7 +772,33 @@
                 container.innerHTML += speakerCard;
             });
 
-            // 3. Generate Sponsors Automatically
+            // 3. Generate Special Lectures Automatically
+            const specialContainer = document.getElementById('special-lectures-container');
+            specialLecturesData.forEach((speaker, index) => {
+                const cardColor = cardColors[(index + 3) % cardColors.length]; // Mix up the colors
+                const specialCard = `
+                    <div class="${cardColor} rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow duration-300 group">
+                        <div class="h-56 overflow-hidden bg-white flex justify-center items-center p-4">
+                            <img src="${speaker.image}" alt="${speaker.name}" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(speaker.name)}&background=e2e8f0&color=475569'">
+                        </div>
+                        <div class="p-5">
+                            <h4 class="text-lg font-bold text-slate-900">${speaker.name}</h4>
+                            <p class="text-sm font-medium text-orange-600 mb-4">${speaker.title}</p>
+                            <div class="flex items-center space-x-4">
+                                <a href="${speaker.linkedin}" target="_blank" class="flex items-center text-red-600 hover:text-red-800 transition-colors" title="LinkedIn Profile">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                                </a>
+                                <a href="mailto:${speaker.email}" class="flex items-center text-red-600 hover:text-red-800 transition-colors" title="Send Email">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                specialContainer.innerHTML += specialCard;
+            });
+
+            // 4. Generate Sponsors Automatically
             const sponsorsContainer = document.getElementById('sponsors-container');
             sponsorsData.forEach(sponsor => {
                 sponsorsContainer.innerHTML += `
@@ -727,10 +808,10 @@
                 `;
             });
 
-            // 4. Initialize Icons (CRITICAL: Must be after all dynamic content is injected)
+            // 5. Initialize Icons (CRITICAL: Must be after all dynamic content is injected)
             lucide.createIcons();
 
-            // 5. Mobile Menu Toggle Logic
+            // 6. Mobile Menu Toggle Logic
             const menuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             const menuIcon = document.getElementById('menu-icon');
@@ -751,7 +832,7 @@
                 });
             });
 
-            // 6. ScrollSpy Logic
+            // 7. ScrollSpy Logic
             const sections = document.querySelectorAll("section");
             const navLinks = document.querySelectorAll(".nav-item:not(.register-trigger)");
 
@@ -773,7 +854,7 @@
                 });
             });
 
-            // 7. Modal Popup Logic
+            // 8. Modal Popup Logic
             const modal = document.getElementById('registrationModal');
             const modalOverlay = document.getElementById('modalOverlay');
             const btnCloseModal = document.getElementById('closeModalBtn');
