@@ -522,7 +522,6 @@
         </div>
     </div>
 
-
     <script>
         /* 🌟🌟🌟 EASY EDIT COMMITTEE SECTION 🌟🌟🌟 */
         const committeeData = [
@@ -798,12 +797,12 @@
                 specialContainer.innerHTML += specialCard;
             });
 
-            // 4. Generate Sponsors Automatically
+            // 4. Generate Sponsors Automatically (UPDATED SIZES)
             const sponsorsContainer = document.getElementById('sponsors-container');
             sponsorsData.forEach(sponsor => {
                 sponsorsContainer.innerHTML += `
-                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex items-center justify-center w-64 h-40">
-                        <img src="${sponsor.image}" alt="${sponsor.name}" class="max-h-24 max-w-full object-contain" onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(sponsor.fallbackName)}&background=fff&color=ea580c'">
+                    <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex items-center justify-center w-80 h-48 md:w-[28rem] md:h-64">
+                        <img src="${sponsor.image}" alt="${sponsor.name}" class="max-h-32 md:max-h-48 max-w-full object-contain transform hover:scale-105 transition-transform duration-300" onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(sponsor.fallbackName)}&background=fff&color=ea580c'">
                     </div>
                 `;
             });
