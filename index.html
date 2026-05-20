@@ -802,7 +802,7 @@
             sponsorsData.forEach(sponsor => {
                 sponsorsContainer.innerHTML += `
                     <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex items-center justify-center w-120 h-78 md:w-[28rem] md:h-64">
-                        <img src="${sponsor.image}" alt="${sponsor.name}" class="max-h-62 md:max-h-68 max-w-full object-contain transform hover:scale-105 transition-transform duration-300" onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(sponsor.fallbackName)}&background=fff&color=ea580c'">
+                        <img src="${sponsor.image}" alt="${sponsor.name}" class="max-h-52 md:max-h-68 max-w-full object-contain transform hover:scale-105 transition-transform duration-300" onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(sponsor.fallbackName)}&background=fff&color=ea580c'">
                     </div>
                 `;
             });
